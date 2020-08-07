@@ -1,0 +1,40 @@
+version: '3'
+services:
+  ggwp:
+    build: .
+    container_name: ggwp_api
+    restart: always
+    environment:
+      # listening port
+      LISTEN_PORT: ${LISTEN_PORT}
+      TOKEN_PASSWORD: ${TOKEN_PASSWORD}
+      # db
+      MASTER_DB_USERNAME: ${MASTER_DB_USERNAME}
+      MASTER_DB_PASSWORD: ${MASTER_DB_PASSWORD}
+      MASTER_DB_HOST: ${MASTER_DB_HOST}
+      MASTER_DB_PORT: ${MASTER_DB_PORT}
+      MASTER_DB_DATABASE: ${MASTER_DB_DATABASE}
+      READ_DB_USERNAME: ${READ_DB_USERNAME}
+      READ_DB_PASSWORD: ${READ_DB_PASSWORD}
+      READ_DB_HOST: ${READ_DB_HOST}
+      READ_DB_PORT: ${READ_DB_PORT}
+      READ_DB_DATABASE: ${READ_DB_DATABASE}
+      # mail
+      MAIL_GUN_DOMAIN: ${MAIL_GUN_DOMAIN}
+      MAIL_GUN_API_KEY: ${MAIL_GUN_API_KEY}
+      # aws
+      AWS_ENDPOINT: ${AWS_ENDPOINT}
+      AWS_REGION: ${AWS_REGION}
+      AWS_BUCKET: ${AWS_BUCKET}
+      AWS_KEY: ${AWS_KEY}
+      AWS_SECRET: ${AWS_SECRET}
+      # tls
+      TLS_KEY: ${TLS_KEY}
+      TLS_CERT: ${TLS_CERT}
+      # social - fb
+      FB_APP_ID: ${FB_APP_ID}
+      FB_APP_SECRET: ${FB_APP_SECRET}
+      # social - twitter
+      TWITTER_CONSUMER_KEY: ${TWITTER_CONSUMER_KEY}
+      TWITTER_CONSUMER_SECRET: ${TWITTER_CONSUMER_SECRET}
+      TWITTER_TOKEN_URL: ${TWITTER_TOKEN_URL}

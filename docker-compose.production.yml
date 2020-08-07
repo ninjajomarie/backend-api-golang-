@@ -1,0 +1,7 @@
+version: '3'
+services:
+  ggwp: # override entry point for testing environment
+    ports:
+      - 443:8080
+    volumes:
+      - /etc/ggwp/certs:/etc/ggwp/certs:ro
